@@ -1,0 +1,19 @@
+
+#bill calculation:
+print (input ("Welcome to the bill calculator :) "))
+bill = input("What is your bill ??")
+
+tax = 12
+tax_rate = tax/100
+bill_with_tax = float(bill)*tax_rate
+
+tip = input("What percentage tip you want to give?")
+tip = int(tip)/100
+
+total_bill = bill_with_tax + int(bill) + tip
+
+#take input how many people want to divide the bill
+people = input("How many people are dividing the bill??")
+per_head_bill = total_bill/int(people)
+
+print("The bill per head is: $ " , per_head_bill )

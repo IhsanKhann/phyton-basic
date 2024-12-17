@@ -1,0 +1,30 @@
+# Online Python - IDE, Editor, Compiler, Interpreter
+print (3.14)
+print(1.68*10)
+print(16*4.1)
+print("hello"[1]) #index printing
+print(11) #print integars
+print(3.14) #print float
+print("String") #print String
+
+#Type Conversion: 
+a = 123 #Declare a
+a = str(a) #convert the type.
+print(a + "123")
+b = 123
+b = str(b) #convert int to str
+print("Result is: 123 + " + b, "=" , 123+int(a) ) # again converting to int
+
+#you can also convert int to float, similarly we convert one type of data to another type.
+z = 12.2
+print(int(z)) #convert the float value to int.
+two_didigt_number =  input("Enter a number")
+print (two_didigt_number)
+#Convert the string to int using type Conversion
+first_digit = int(two_didigt_number[0])
+second_digit = int(two_didigt_number[1]) #always write the index online.
+#add both: 
+sum = first_digit + second_digit
+#print sum: 
+print ("sum of the digits" , first_digit , " and" , second_digit , " is: " , sum)
+
