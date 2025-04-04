@@ -38,6 +38,6 @@ else:
   
   try:
     print(check_Positive_Number(-5))
-  except Exception as e:
-    print(e)
+  except Exception as a:
+    print(a)
   
