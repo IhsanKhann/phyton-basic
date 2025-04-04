@@ -20,6 +20,6 @@ else:
     print("Computer Choice:Rock")
     
 if(choice == comp_choice):
-    print("You lose.")
+    print("You lose and the computer win.") 
 else:
-    print("You Win.")
+    print("You Win and the computer lost.")
