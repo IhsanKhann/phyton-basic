@@ -247,3 +247,30 @@ function3(mylist)
 function3(mylist2)
 function3(mylist3)
 
+def function4(num1=0,num2=0):
+  result = 0
+  try:
+    if num2 == 0:
+      raise ZeroDivisionError("Zero is not allowed")
+      return result
+    elif num1 < 0:
+      raise ValueError("Number is Negative.")
+      return result 
+    elif not isinstance(num1, (int,float)):
+      raise TypeError("Number is not an int")
+      return result
+    else:
+      result = num1/num2
+      return result 
+  except (ZeroDivisionError,ValueError,TypeError) as E:
+    print("Error is: " , E)
+
+  return result 
+  
+  
+print(function4(10)) #zeroError
+print(function4(-20)) #zeroError
+print(function4(-20,10)) #ValueError
+print(function4(10,"20")) #TypeError
+print(function4(20,5)) #Nomral (NoError)
+
