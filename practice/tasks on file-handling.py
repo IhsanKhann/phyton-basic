@@ -54,16 +54,7 @@ with open("CopiedQuote.txt", "w") as a:
     a.writelines(content)
 
 
-# 9. Word Frequency
-# Read a file
-# Count how many times each word appears
-# Print the result (like a mini dictionary).
-
-#1- split all the sentences to indiviual words and then I would make a set out of it. So list to set to list
-#2- count method to count all the elements and then store that count in another list. Use append for it.
-#3- take these 2 lists and make a dictionary of it. (Word:count)
-#4- print it out
-
+# 9. Word Frequeny:
 with open("Quote.txt", "r") as I:
     content = I.readlines()
 
@@ -77,24 +68,19 @@ for i in content:
 
 Remove_Duplicates = set(content) # convert the list to a set with no duplicates.
 words = list(Remove_Duplicates)
-Data = dict(zip(words,count))
 
+Data = dict(zip(words,count))
 for key,value in Data.items():
     print(f" {key} : {value} ")
-    
 
+#Task-10: 
+with open("Quote.txt", "r") as r:
+    lines = r.readlines() #reading
 
-
-
-
-
-
-
-# 🔴 Advanced Tasks
-# 10. Remove Blank Lines
-# Read a file
-
-# Create a new file that contains the same content without blank lines.
+with open("QuoteNew.txt", "w") as w: #writing
+    for line in lines:
+        if line.strip():
+            w.write(line)
 
 # 11. Sort File Lines Alphabetically
 # Read all lines of a file
