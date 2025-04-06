@@ -1,0 +1,1 @@
+Become a Warrior in a World of Worries Be Crazy 24 bytes in C++, in Python more - because a string is an object with hash values, characters, pointer etc etc  and everything takes size so it almost takes the string size to '49 bytes', 1 byte is taken by one character.
