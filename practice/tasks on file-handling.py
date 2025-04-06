@@ -82,17 +82,5 @@ with open("QuoteNew.txt", "w") as w: #writing
         if line.strip():
             w.write(line)
 
-# 11. Sort File Lines Alphabetically
-# Read all lines of a file
-
-# Sort them
-
-# Write them into a new file sorted.txt.
-
-# 12. Merge Two Files
-# Read from file1.txt and file2.txt
-
-# Combine their contents into merged.txt.
-
 
 
