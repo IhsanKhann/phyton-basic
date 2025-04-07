@@ -1,5 +1,6 @@
 import csv
 import json
+import pickle
 
 #There are 2 types of data:
 # 1- Human-Readble-Form: .csv, .json, .txt, .html
@@ -86,10 +87,75 @@ data = {
 }
 
 #using the json module:
+# If data is complex, then we use serialization and de-serialization to store the data in bytes by bytes in binary form.
+# json uses serializtion and de-serialization.
+
 with open("data.json", "w") as file:
     json.dump(data,file) #data loaded into the file.
 
 #read the data:
 with open("data.json", "r") as file:
     print(json.load(file)) #loaded all the data to the file
+
+#Binary Data:
+#.bin - it has many modes such as
+# rb - read in binary
+# wb - write in binary
+# ab - append in binary
+# there are many more modes such as rb+, wb+, ab+ etc
+
+with open("data.bin", "wb" ) as file:
+    file.write(b"This is Ihsan") 
+
+with open("data.bin", "rb") as file:
+    data = file.read() 
+    print(data) 
+
+with open("data.bin", "ab" ) as file:
+    file.write(b"This is Usman now")
+
+with open("data.bin", "rb+" ) as file:
+    content = file.read()
+    print(content)
+
+    file.write(b"This is sibling no-2") # file-pointer is one byte forward
+    print(file.read()) # shows empty.
+
+    file.seek(0) # moves back to the inital - start of the file.
+    print(file.read()) 
+
+#Serialization and De-serialization:
+# Serialization is the process of converting complex data into the binary form.
+# List,Dictionary - to binary form.
+
+# De-serialization is the process of converting the binary data back to the original form
+# Binary form back to list,dictionary.
+
+#we use the pickle module for this. .pkl is the extension for saving the file.
+# pickle.dumb() - this must be a class level method
+# same goes for pickle.load() - this is also a class level method.
+
+#   pickle.dumb() - this is used for writing the data
+#   pickle.load() - this is used for reading the data.
+
+# binary read and write modes must be used.
+
+data = { #data is a object - .dump() converts it to binary form.
+    "Name":"Ihsan" ,
+    "Age":19,
+    "Subject":{
+        "Subject1": "Python" ,
+        "Subject2": "Java" ,
+        "Subject3": "C++" ,
+    }
+}
+
+with open("new3.pkl", "wb") as file:
+    pickle.dump(data, file) 
+
+with open("new3.pkl", "rb") as file:
+    content = pickle.load(file)
+    
+    for key,value in content.items():
+        print(f"{key} : {value}") 
 
