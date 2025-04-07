@@ -18,6 +18,13 @@ import shutil
 
 # os.rename() annd shutil.move() - these 2 methods are used when we want to rename or move our file
 # os.rename() - for renaming the file, takes 2 parameters: (old_file, new_file)
+
+# shutil (module) 
+# shutil.rmtree() is used to remove non-empty-folders.
+# shutil.copy() for copying folders
+# shutil.rmdirs() for removing folders
+# shutil.mkdir() 
+# shutil.rmdir() for making folder
 # shutil_move() - for moving the file, takes 2  parameter: (source, destination) - source is the file name, Destination - where you want to move the file.
 
 #Task-1: Method 1: using os
