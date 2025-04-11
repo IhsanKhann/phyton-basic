@@ -1,0 +1,26 @@
+[
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Fiction",
+        "id": 1
+    },
+    {
+        "title": "War And Peace",
+        "author": "Leo Tolstoy",
+        "genre": "Drama",
+        "id": 2
+    },
+    {
+        "title": "Register",
+        "author": "Ihsan Khan",
+        "genre": "Drama",
+        "id": 3
+    },
+    {
+        "title": "Khan",
+        "author": "Ihsan",
+        "genre": "Crime",
+        "id": 4
+    }
+]
